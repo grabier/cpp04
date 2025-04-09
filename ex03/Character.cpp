@@ -6,13 +6,15 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 13:58:00 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/08 13:08:48 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/09 20:47:35 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
 Character::Character(){
+	floor = new t_floor *;
+	*floor = NULL;
 	for (int i = 0; i < 4; i++){
 		inventory[i] = NULL;
 	}
@@ -20,17 +22,12 @@ Character::Character(){
 
 Character::Character(const std::string &n){
 	name = n;
+	floor = new t_floor *;
+	*floor = NULL;
 	for (int i = 0; i < 4; i++){
 		inventory[i] = NULL;
 	}
 }
-
-/* Character::Character(const Character &other){
-	name = other.getName();
-	for (int i = 0; i < 4; i++){
-		inventory[i] = other.inventory[i]->clone();
-	}
-} */
 
 Character::Character(const Character &other){
 	*this = other;
@@ -41,6 +38,7 @@ Character::~Character(){
 		if (inventory[i] != NULL)
 			delete inventory[i];
 	}
+	ft_delete_floor(floor);
 }
 
 Character &Character::operator=(const Character &other){
@@ -90,9 +88,8 @@ void Character::equip(AMateria *m){
 }
 
 void Character::unequip(int i){
-	//k coño hago con las desequipadas
 	if (inventory[i] != NULL){
-		delete inventory[i];//seguramente no
+		ft_add_to_floor(floor, inventory[i]);
 		inventory[i] = NULL;
 	}
 	else

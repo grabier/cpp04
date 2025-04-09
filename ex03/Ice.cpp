@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 13:38:45 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/08 18:28:39 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/09 20:27:16 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ std::string const &Ice::getType(void) const{
 }
 
 AMateria *Ice::clone() const{
-	std::cout << "CLONE input materia type: " << this->getType() << std::endl;
+	//std::cout << "CLONE input materia type: " << this->getType() << std::endl;
 	AMateria *r = new Ice(*this);
-	std::cout << "CLONE return materia type: " << r->getType() << std::endl;
+	//std::cout << "CLONE return materia type: " << r->getType() << std::endl;
 	return (r);
 }
 

@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:41:13 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/09 16:01:50 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/09 20:26:57 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ AMateria *MateriaSource::createMateria(std::string const &t){
 	for(int i = 0; i < 4; i++){
 		//std::cout << "inventary type: " << minventory[i]->getType() << std::endl;
 		if(minventory[i] != NULL && t == minventory[i]->getType()){
-			std::cout << "type create: " << t << std::endl;
+			//std::cout << "type create: " << t << std::endl;
 			return (minventory[i]->clone());
 		}
 	}
