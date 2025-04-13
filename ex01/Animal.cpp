@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 09:33:41 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/07 09:26:07 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/13 15:30:28 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Animal::~Animal(){
 }
 
 Animal& Animal::operator=(const Animal &other){
+	std::cout << "Animal operator = called\n";
 	if (this != &other){
 		type = other.type;
 	}

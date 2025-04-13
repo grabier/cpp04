@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 10:27:11 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/07 11:21:09 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:36:17 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Dog::Dog(){
 Dog::Dog(const Dog &other){
 	std::cout << "Dog copy constructor" << std::endl;
 	type = other.type;
+	delete brain;
 	brain = new Brain(*other.brain);
 }
 

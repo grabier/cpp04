@@ -1,6 +1,6 @@
 NAME = materias
 
-CFLAGS = -Wall -g -Wextra -Werror -std=c++98 -fsanitize=address
+CFLAGS = -Wall -g -Wextra -Werror -std=c++98 #-fsanitize=address
 
 CC = c++
 

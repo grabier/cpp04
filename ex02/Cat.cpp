@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 09:58:00 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/07 11:20:57 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:36:34 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Cat::Cat(){
 Cat::Cat(const Cat &other){
 	std::cout << "Cat copy constructor" << std::endl;
 	type = other.type;
+	delete brain;
 	brain = new Brain(*other.brain);
 }
 

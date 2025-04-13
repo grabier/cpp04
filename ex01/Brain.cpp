@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 09:31:19 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/07 09:46:46 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/13 15:41:23 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Brain::~Brain(){
 }
 
 Brain& Brain::operator=(const  Brain &other){
+	std::cout << "Brain operator = called\n";
 	if (this != &other){
 		for(int i = 0; i < 100; i++){
 			ideas[i] = other.getIdea(i);

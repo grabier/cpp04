@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 10:27:11 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/07 09:50:13 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/13 15:44:05 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ Dog::Dog(){
 
 Dog::Dog(const Dog &other){
 	type = other.type;
-	brain = other.brain;
+	delete brain;
+	brain = new Brain(*other.brain);//deeps copy
 }
 
 Dog::~Dog(){
@@ -29,9 +30,11 @@ Dog::~Dog(){
 }
 
 Dog& Dog::operator=(const Dog &other){
+	std::cout << "Dog operator = called\n";
 	if (this != &other){
 		type = other.type;
-		brain = other.brain;
+		delete brain;
+		brain = new Brain(*other.brain);//deeps copy
 	}
 	return (*this);
 }

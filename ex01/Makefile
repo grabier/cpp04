@@ -6,7 +6,7 @@ CC = c++
 
 SRC_DIR = ./src
 
-SRCS := AAnimal.cpp main.cpp Cat.cpp Dog.cpp Brain.cpp
+SRCS := Animal.cpp main.cpp Cat.cpp Dog.cpp Brain.cpp
 
 OBJ_DIR = ./objs
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)

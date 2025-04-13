@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 09:33:44 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/07 10:02:13 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/13 15:43:13 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,14 @@
 int main()
 {
 	
-	Animal* j = new Dog();
+	Dog uno;
+	Dog temp;
+	temp = uno;
+	/* {
+		Dog temp = uno;
+	} */
+
+	/* Animal* j = new Dog();
 	const Animal* i = new Cat();
 
 	//testing deep copy
@@ -46,7 +53,7 @@ int main()
 		delete arr[i];
 	}
 	delete i;
-	delete j;
+	delete j; */
 
 	return 0;
 }

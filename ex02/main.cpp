@@ -6,7 +6,7 @@
 /*   By: gmontoro <gmontoro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 09:33:44 by gmontoro          #+#    #+#             */
-/*   Updated: 2025/04/07 11:20:18 by gmontoro         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:38:01 by gmontoro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,21 @@ int main()
 	
 	Cat A;
 	A.makeSound();
+
+	{
+		Cat temp;
+		A = temp;
+	}
 	
- 	AAnimal* animales[100];
+	Dog B;
+	B.makeSound();
+
+	{
+		Dog temp;
+		B = temp;
+	}
+
+ 	/* AAnimal* animales[100];
 	AAnimal** bichardos;
 	int i = 0;
 	while(i < 50)
@@ -59,7 +72,7 @@ int main()
 	for(int i = 0; i < 5; i++)
 		std::cout << copy.getIdea(i) << std::endl;
 	for(int i = 0; i < 5; i++)
-		std::cout << third.getIdea(i) << std::endl;
+		std::cout << third.getIdea(i) << std::endl; */
 	
 	return 0;
 }
